@@ -6,13 +6,13 @@ This preregistration is the Stage 0 contract. It records expected machine outcom
 
 - Repository: `dsh-effect-doctor`; workspace: `D:\knowledgeBase\dsh-effect-doctor`.
 - Product Git repository: local `main` initialized; public remote `https://github.com/chouyong/dsh-effect-doctor` created at `2026-08-16T11:35:15Z`; no product commit or artifact existed at creation time.
-- Source facts: Cordis `packages/core` `4.0.0-rc.8`; timer plugin `1.1.2`; DeepSeek Harness source `0.1.0-rc.5`.
+- Source facts: primary DSH runtime `@deepseek-ai/cordis` `4.0.1`; upstream comparison Cordis core `4.0.0-rc.8`; upstream timer plugin `1.1.2`; DeepSeek Harness source `0.1.0-rc.5`.
 - Requested storage: product source, temporary profiles, runner spill files, receipts, and artifacts stay on `D:`; no secrets are persisted.
 - DSH runtime: not started for Stage 0; no live web port, relay URL, or active profile is assumed.
 
 ## Stage 0 support and observation contract
 
-- Supported adapter baseline: Cordis core `4.0.0-rc.8`, with runtime shape checks for `Context.registry.plugin`, `RegistryService.get/has/size`, `Fiber.uid/state/dispose`, `Fiber.getEffects`, and `FiberState` values.
+- Supported adapter baseline: DSH vendored `@deepseek-ai/cordis` `4.0.1`, with runtime shape checks for `Context.registry.plugin`, `RegistryService.get/has/size/entries`, `Fiber.uid/state/dispose/getEffects`, reflect provider records, logger cursor/buffer, internal event-hook projection, and pinned `FiberState` values.
 - Public lifecycle: `ctx.registry.plugin(fixture)` → await returned fiber → `fiber.dispose()` → await settle window → snapshot/compare.
 - Adapter-only surfaces: `Fiber._hooks`, `Fiber._disposables`, `EventsService._hooks`, and Node internal loader APIs. Missing fields, unexpected types, version mismatch, or private-surface drift produce `UNVERIFIABLE_VERSION` or `UNVERIFIABLE_SURFACE` with non-zero exit.
 - Covered resources: Cordis fibers/states, registry runtimes, Cordis-managed effects/disposables, Cordis event registrations, services/providers visible through the adapter, and Cordis timer effects when the timer plugin is installed.

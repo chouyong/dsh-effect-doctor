@@ -1,0 +1,28 @@
+{
+  "name": "dsh-effect-doctor",
+  "version": "0.1.0",
+  "description": "Verify that Cordis-managed runtime resources return to baseline after plugin teardown.",
+  "type": "module",
+  "private": true,
+  "engines": {
+    "node": "^22.19.0 || >=24.0.0"
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/src/index.d.ts",
+      "default": "./dist/src/index.js"
+    }
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "test": "node --test dist/tests/*.test.js",
+    "test:real": "node dist/scripts/real-gate.js",
+    "verify:cli": "node dist/src/cli.js --help",
+    "verify": "npm run typecheck && npm run build && npm run test && npm run verify:cli && npm run test:real"
+  },
+  "devDependencies": {
+    "@types/node": "^22.20.0",
+    "typescript": "^6.0.3"
+  }
+}

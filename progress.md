@@ -11,4 +11,9 @@
 - Initialized local Git `main`, created public GitHub repository `chouyong/dsh-effect-doctor`, bound `origin`, and recorded the real API creation timestamp in `docs/publication-eligibility.md`.
 - The first same-name repository lookup returned the expected not-found error; no write occurred until the user selected Public visibility.
 - Root hook projection created `AGENTS.md`, `CLAUDE.md`, `.claude/`, `.codex/`, `.meta-kim/`, and `graphify-out/`; these remain preserved and unstaged. Read both root rule files before continuing.
+- Pushed the first real milestone commit `1f3b0ba` to `origin/main`.
+- Rebased the adapter target from upstream Cordis comparison source to the actual DSH vendored `@deepseek-ai/cordis` `4.0.1` runtime after inspecting its built package and lifecycle implementation.
+- Ran a real vendored-Cordis import probe: clean mount/dispose returned registry size to zero, target uid to `null`, state to `DISPOSED`, and root effects to empty.
+- Began Stage 1 with the package/TypeScript scaffold and versioned receipt/outcome/adapter contracts.
+- Installed three development packages with `npm install --ignore-scripts --legacy-peer-deps`; initial `npm run typecheck` passed.
 - No Claude request, GitHub write, PR, cleanup, reset, or cross-repository modification performed.
