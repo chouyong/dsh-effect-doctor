@@ -92,6 +92,20 @@ pnpm dsh --profile effect-doctor-stage3 --dump-config
 
 The tarball is prebuilt; installation does not need a package build-script allowance. Use a fresh D-drive `DSH_HOME` for audit evidence and never install or unload fixtures in an active production profile.
 
+After installation, run the keyless real Loader gate against the installed module:
+
+```powershell
+node dist/scripts/dsh-real-gate.js `
+  --dsh-source D:\knowledgeBase\deepseek-harness `
+  --dsh-home D:\dsh-effect-doctor-gate `
+  --profile effect-doctor-stage3 `
+  --receipt D:\dsh-effect-doctor-gate\effect-doctor\latest\receipt.json `
+  --tarball D:\path\to\dsh-effect-doctor-0.1.0.tgz `
+  --out-dir D:\path\to\stage-3-evidence
+```
+
+This gate rechecks the installed profile and dumped composition, boots a minimal real DSH Loader tree, executes the registered tool, validates its output against the completed receipt, disposes only the doctor Loader entry, and proves the tool registration disappears.
+
 ## Verification
 
 ```powershell

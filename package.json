@@ -35,13 +35,15 @@
   },
   "scripts": {
     "build": "tsc -p tsconfig.json",
+    "gate:dsh": "node dist/scripts/dsh-real-gate.js",
     "gate:real": "node dist/scripts/real-gate.js",
     "prepack": "npm run build",
     "typecheck": "tsc -p tsconfig.json --noEmit",
     "test": "node --test dist/tests/contracts.test.js dist/tests/engine.test.js dist/tests/receipt-viewer.test.js dist/tests/dsh-plugin.test.js dist/tests/bundle.test.js",
     "test:real": "node --test dist/tests/real-cordis.test.js",
     "verify:cli": "node dist/src/cli.js --help",
-    "verify": "npm run typecheck && npm run build && npm run test && npm run verify:cli && npm run test:real && npm run gate:real"
+    "verify:dsh-gate": "node dist/scripts/dsh-real-gate.js --help",
+    "verify": "npm run typecheck && npm run build && npm run test && npm run verify:cli && npm run verify:dsh-gate && npm run test:real && npm run gate:real"
   },
   "devDependencies": {
     "@types/node": "^22.20.0",
