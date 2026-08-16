@@ -21,4 +21,6 @@
 - Initialized this developing repository with `codegraph init -i`; the initial index contains the two current TypeScript source files.
 - First real adapter probe correctly mounted and returned clean resources to baseline, but exposed a shape-check bug: Cordis logger is callable. Recorded the failure before patching the predicate.
 - Corrected callable-service probing. Typecheck, build, and the expanded real adapter probe pass: baseline `3`, mounted `13`, after `3`, with effect/fiber/listener/runtime/service categories all observed.
+- Added the pure engine, deterministic comparison, bounded phases, and single-run lock. The first typecheck found only missing Node type activation in `tsconfig` and is being corrected.
+- Engine validation now passes against real vendored Cordis: clean => `PASS`; retained root sibling => `FAIL_LEAK`; logged throwing disposer => `FAIL_DISPOSE`; hanging disposer => `FAIL_TIMEOUT`; version `0.0.0` => `UNVERIFIABLE_VERSION`.
 - No Claude request, GitHub write, PR, cleanup, reset, or cross-repository modification performed.

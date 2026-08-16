@@ -11,7 +11,8 @@
     "rootDir": ".",
     "skipLibCheck": true,
     "strict": true,
-    "target": "ES2023"
+    "target": "ES2023",
+    "types": ["node"]
   },
   "include": [
     "scripts/**/*.ts",

@@ -1,2 +1,5 @@
 export * from './contracts.js'
 export * from './cordis-adapter.js'
+export * from './compare.js'
+export * from './engine.js'
+export * from './lock.js'

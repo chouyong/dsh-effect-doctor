@@ -5,7 +5,7 @@
 - Visibility: `public`
 - GitHub `created_at`: `2026-08-16T11:35:15Z`
 - Earliest 24-hour eligibility: `2026-08-17T11:35:15Z`
-- Current product commit count after the adapter milestone: `3`
+- Current product commit count after the engine milestone: `4`
 - Required product commit count: at least `10` real functional commits
 - Stage 0 decision: `GO_ENGINE`
 - Stage 1–3 runtime evidence: pending
