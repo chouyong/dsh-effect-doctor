@@ -187,7 +187,7 @@ export async function runAudit<Context, Fiber>(
   }
 
   let fiber: Fiber | undefined
-  let primaryFailure: 'FAIL_MOUNT' | 'FAIL_EXERCISE' | undefined
+  let primaryFailure: 'FAIL_MOUNT' | 'FAIL_EXERCISE' | 'FAIL_TIMEOUT' | undefined
   let cursor = options.adapter.errorCursor(options.context)
   try {
     fiber = options.adapter.mount(options.context, options.fixture.plugin)
@@ -212,18 +212,7 @@ export async function runAudit<Context, Fiber>(
     } catch (error) {
       errors.push(errorSummary(error, 'exercise'))
       errors.push(...options.adapter.errorsSince(options.context, cursor, 'exercise'))
-      primaryFailure = isTimeout(error) ? undefined : 'FAIL_EXERCISE'
-      if (isTimeout(error)) {
-        return receipt(
-          options.runtime,
-          options.fixture.name,
-          configuration,
-          phases,
-          emptyDelta(),
-          errors,
-          'FAIL_TIMEOUT',
-        )
-      }
+      primaryFailure = isTimeout(error) ? 'FAIL_TIMEOUT' : 'FAIL_EXERCISE'
     }
   }
 

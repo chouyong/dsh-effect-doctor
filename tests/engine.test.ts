@@ -229,6 +229,49 @@ test('unstable settle snapshots time out', async () => {
   assert.equal(result.outcome, 'FAIL_TIMEOUT')
 })
 
+test('exercise timeout still disposes the mounted fiber', async () => {
+  const cleanContext = context()
+  cleanContext.resources.add('baseline')
+  let disposeCalls = 0
+  const cleanResult = await runAudit({
+    adapter: new FakeAdapter(),
+    context: cleanContext,
+    runtime,
+    configuration: { ...configuration, operationTimeoutMs: 10 },
+    fixture: {
+      ...fixture('exercise-timeout-cleanup', (value) => {
+        value.resources.add('mounted')
+        return {
+          dispose: () => {
+            disposeCalls += 1
+            value.resources.delete('mounted')
+          },
+        }
+      }),
+      exercise: () => new Promise<void>(() => {}),
+    },
+  })
+  assert.equal(cleanResult.outcome, 'FAIL_TIMEOUT')
+  assert.equal(disposeCalls, 1)
+  assert.equal(cleanContext.resources.has('mounted'), false)
+  assert.ok(cleanResult.phases.some(phase => phase.phase === 'unmount'))
+
+  const rejectingResult = await runAudit({
+    adapter: new FakeAdapter(),
+    context: context(),
+    runtime,
+    configuration: { ...configuration, operationTimeoutMs: 10 },
+    fixture: {
+      ...fixture('exercise-timeout-dispose-failure', () => ({
+        dispose: () => { throw new Error('dispose') },
+      })),
+      exercise: () => new Promise<void>(() => {}),
+    },
+  })
+  assert.equal(rejectingResult.outcome, 'FAIL_DISPOSE')
+  assert.ok(rejectingResult.errors.some(error => error.phase === 'unmount'))
+})
+
 test('existing single-run lock fails without mounting', async () => {
   const directory = join('.tmp', `lock-test-${process.pid}`)
   const lockPath = join(directory, 'doctor.lock')
