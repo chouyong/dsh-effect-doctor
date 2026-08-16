@@ -31,3 +31,7 @@ Complete Stage 0 technical validation and, if the observable Cordis surfaces are
 | First real adapter probe rejected Cordis's callable logger service | 1 | Expanded the structural predicate to accept non-null objects and functions; rerun build and the real adapter probe. |
 | First engine typecheck could not resolve Node globals/modules | 1 | Added the already-installed `@types/node` to `compilerOptions.types`; rerun typecheck before behavior tests. |
 | Fixture thenable type recursively fulfilled with itself | 1 | Narrowed the fixture-only await contract to `PromiseLike<void>`; production adapter retains the real Fiber type. |
+| Combined Stage 3 preflight read failed because `README.md` does not exist | 1 | Record the missing required deliverable; rerun only the remaining independent reads with settled results and create README during Stage 3. |
+| DSH schema probe imported unpublished `packages/core/tools/lib/schema.js` | 1 | Use the package's public `lib/index.js` export surface or source evidence; do not repeat the internal build-path assumption. |
+| Schemastery probe assumed nonexistent vendored `lib/index.js` | 1 | Install the published pinned package into the product and verify its public export/API through the project's own resolver. |
+| Stage 3 aggregate patch did not match npm-reordered `package.json` | 1 | No partial edit occurred; split source/tests from the manifest update and patch against the current package file. |

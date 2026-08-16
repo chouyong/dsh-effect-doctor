@@ -31,3 +31,9 @@
 - Added the Stage 2 isolated real-gate runner with scrubbed child environments, exact child ownership, bounded parent timeout, exit/receipt/hash validation, and deterministic summary output. Typecheck passes; runtime evidence will be generated after committing the runner so its source SHA is exact.
 - Full `npm run verify` passed at `0b1e7c0`; Stage 2 generated seven validated receipts and `gate-summary.json`. Independent hash and privacy checks passed, and `docs/STAGE_2_ISOLATED_GATE.md` records the stable evidence.
 - No Claude request, GitHub write, PR, cleanup, reset, or cross-repository modification performed.
+- Resumed Stage 3 from `d45b7a3`; confirmed 9 real commits, clean tracked state, and only preserved rule projections untracked.
+- Proved the real DSH tool/Loader lifecycle: registration is effect-owned, the installed entry is individually resolvable/disposable, and keyless `app-boot.boot()` can execute a real Loader composition.
+- `@deepseek-ai/dsh-tools@0.1.0-rc.5` is not on npm, while Cordis `4.0.1` and Schemastery `3.18.1` are published. Added exact Schemastery with scripts disabled for bundle config validation.
+- Added the strict bounded receipt reader, sanitized summary projector, host-only DSH tool plugin, Schemastery config, and bundle patch. The first `npm run typecheck`, build, and expanded unit suite passed: `15/15`, failed `0`, skipped `0`.
+- Added the README support matrix, no-Web evidence rule, bundle installation guide, and package-content contract. `npm pack --dry-run --json` reported 27 intended files, 17,296 packed bytes, and no tests or artifacts.
+- The full pre-commit `npm run verify` passed with unit `16/16`, real Cordis `4/4`, seven isolated receipts, and `skipped: 0`. The Stage 2 gate correctly remained bound to committed source `d45b7a3` while Stage 3 changes were uncommitted.

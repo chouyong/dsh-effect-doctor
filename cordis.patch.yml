@@ -1,0 +1,7 @@
+- insert:
+    - id: effect-doctor-receipt
+      name: dsh-effect-doctor/dsh-plugin
+      config:
+        receiptPath: !!js ctx.dshHomePath('effect-doctor/latest/receipt.json')
+        maxBytes: 1048576
+        timeoutMs: 5000
