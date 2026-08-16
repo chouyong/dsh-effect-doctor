@@ -10,16 +10,19 @@ Complete Stage 0 technical validation and, if the observable Cordis surfaces are
 - [complete] Stage 1: scaffold engine, adapter, schema, fixtures, and verification commands
 - [complete] Stage 2: run isolated runner and capture machine-readable receipts
 - [complete] Stage 3: add optional read-only DSH surface and real runtime evidence
-- [in_progress] Stage 4: stabilize evidence, run Claude review, and prepare only eligible publication artifacts
+- [complete] Stage 4: stabilize evidence, run Claude review, and prepare only eligible publication artifacts
+- [in_progress] Stage 5: wait for real repository age, then check target-list rules and focused PR diff before any PR
 
 ## Current gates
 
-- PR publication: `WAITING_ELIGIBILITY` until GitHub creation age, 10 real commits, and Claude `GO` are all proven.
-- Claude review: broad R1 is preserved as `NO_RESULT_TIMEOUT`; engine R1A returned `GO` for the pre-fix tree, and a distinct post-fix R2 plus remaining focused evidence review are required.
+- PR publication: `WAITING_ELIGIBILITY`; the 10-commit threshold and Claude final `GO` are proven, but repository age is not. Target-list rules and the focused PR diff must be checked only after the real 24-hour instant.
+- Claude review: broad R1 is preserved as `NO_RESULT_TIMEOUT`; R1A/R2 are historical narrow `GO`; final-tree R3 engine, R4A viewer/tool, and R4B Stage 3 evidence are validated `GO`; aggregate final Claude decision remains required.
 - GitHub repository: created with explicit authorization as public `chouyong/dsh-effect-doctor`; PR publication remains fail-closed.
 - Current publication identity: local `HEAD`, refreshed `origin/main`, and GitHub API `main` all resolve to `b638cdd55e1fdb1c39e9b1f8eaab3070d737f55d`; 15 genuine commits are present and the branch difference is `0/0`.
-- Final cleanup-precedence Stage 3: fresh-profile install and real Loader gate pass at `b638cdd`; raw Stage 2/3 evidence is independently hash-closed, and checked-in authority documents are being stabilized before a distinct final-tree engine review.
-- Claude R2 engine: validated `GO` for the `004fe47` cleanup fix, but exposed a real logger-only disposer-error precedence mismatch. Codex fixed it and added a regression sub-case; because source changed after R2, a distinct post-fix engine review remains required.
+- Final cleanup-precedence Stage 3: fresh-profile install and real Loader gate pass at `b638cdd`; raw Stage 2/3 evidence and checked-in authority documents are independently hash-closed.
+- Claude R2 engine: historical `GO` for the `004fe47` cleanup fix that exposed the logger-only disposer-error precedence mismatch; Codex fixed it in `b638cdd`, and final-tree R3 subsequently closed the finding with `GO`.
+- Claude final review: R3 engine, R4A viewer, R4B Stage 3, and R5 aggregate receipts are each validated `GO`; R5 SHA-256 is `fe4c3003e181c4ffafded368a5c0b43e41844780a1f3c1c23ab5bd73d7b0dcf1`.
+- Publication age: GitHub created `2026-08-16T11:35:15Z`; at `2026-08-16T14:22:43Z` the repository was only about 2 hours 47 minutes old. The next authorized action is waiting until `2026-08-17T11:35:15Z`, then checking the target list and focused PR diff; no PR exists.
 
 ## Errors Encountered
 
@@ -47,3 +50,6 @@ Complete Stage 0 technical validation and, if the observable Cordis surfaces are
 | R1A dry-run found the shared Claude mutex held | 1 | Process audit proved the owner is a later, separate `dsh-branch-review` terminal chain; left it untouched and wait for natural release before retrying dry-run. |
 | Stage 3 independent-check batch used a fail-fast `Promise.all` around an expected non-zero overwrite negative test | 1 | Preserve the observed exit `1` and exact non-overwrite diagnostic; do not repeat that negative test, and rerun only the hidden independent hash/check verification as a separate command. |
 | Final authority validator passed multiple `Get-Content -Raw` files into vectorized `-notmatch` | 1 | Preserve the UTF-8/marker/diff results, classify the missing-hash list as a wrapper false positive, and rerun with explicit joined text before matching required values. |
+| Isolated post-Claude verify required the Stage 2 summary to byte-match the main-worktree hash | 1 | Preserve the full PASS and matching `b638cdd` source identity; compare the two JSON summaries to classify path-dependent receipt hashes from the junction environment, while retaining the independently unchanged Stage 3 hash closure. |
+| PowerShell `Remove-Item` threw `NullReferenceException` on the validated temporary junction | 1 | Confirm zero deletion, do not switch shells, and remove only the same verified junction paths with `.NET Directory.Delete(path, false)` before unregistering the temporary worktree. |
+| Final closeout validator concatenated Git's string commit count with integer `1` as `161` | 1 | Preserve all passing receipt/UTF-8/product/authority/diff results and rerun only the prospective-count expression with an explicit `[int]` cast. |

@@ -28,14 +28,16 @@ The gate booted a minimal real DSH configuration through `@deepseek-ai/dsh-app-b
 | Dumped composition matched | `PASS` |
 | Real Loader boot | `PASS` |
 | `effect_doctor_receipt` registered | `PASS` |
-| Tool output satisfied registered JSON Schema | `PASS` |
-| Tool output matched independently parsed receipt | `PASS` |
+| Tool output was JSON-safe under the registered `{}` schema | `PASS` |
+| Tool output matched a separately read summary from the same strict parser implementation | `PASS` |
 | Text rendering matched canonical summary | `PASS` |
 | Only doctor Loader fiber disposed | `PASS` |
 | Tool registration absent after disposal | `PASS` |
 | Existing evidence directory rejected | `PASS` / exit `1` |
 
 After the Stage 3 run, `npm run verify` passed again: unit tests `17/17`, real Cordis tests `4/4`, seven isolated CLI receipts, both CLI help contracts, and `skipped: 0`. The exercise-timeout regression test proves the mounted fiber is still disposed before the primary `FAIL_TIMEOUT` result is returned.
+
+The gate resolves the definition from the real `ToolRuntime` and invokes that definition's `execute` function directly. It does not exercise the model-facing ToolRuntime dispatch pipeline. The substantive summary-shape proof is exact equality with a separately read result from the same strict parser implementation; the registered `{}` schema proves JSON-safety only.
 
 ## Artifact identities
 
@@ -46,18 +48,21 @@ After the Stage 3 run, `npm run verify` passed again: unit tests `17/17`, real C
 | Clean JSON receipt | `d1824d2a59506cfa025d7606176447633de73f3bf44866c2e54e3d1ada2f6746` |
 | DSH vendored Cordis module | `1729cdbf8ee40b17c8839e06bf96491490548559e11ef7e411271e0754e751c5` |
 | Dumped installed composition | `8a661796bdb78600a4c482cfb5d8a82a282ff77f8b2f8d39b1e4d054632c27a0` |
-| Minimal Loader configuration | `5dbdfb194e503ebe483f26ad4371c532db12a82cfdc5729ee769ecc93ff3de8a` |
+| Post-disposal Loader write-back configuration | `5dbdfb194e503ebe483f26ad4371c532db12a82cfdc5729ee769ecc93ff3de8a` |
 
 All six artifact hashes and every summary boolean were independently recomputed after the gate. The summary property-name audit found no API key, credential, secret, password, cookie, or authorization fields.
+
+The Loader configuration hash is computed from the preserved post-run file after entry disposal wrote back `disabled: true`; it is not the hash of the gate's initially authored input bytes.
 
 The earlier `artifacts/stage-3/cd0d0f7` and `artifacts/stage-3/004fe47` sealed runs remain preserved as historical evidence. Neither is the final release artifact identity after the exercise-timeout cleanup and cleanup-error precedence changes.
 
 ## Web and screenshot classification
 
-This product has no client export, browser bundle, slot, style, or Web surface. Client asset HTTP, style-node disposal, browser console/page/request errors, fork UI geometry/navigation, screenshots, and GIFs are `NOT_APPLICABLE_NO_WEB_SURFACE`. No substitute or fabricated screenshot exists.
+This product has no DSH client export, browser bundle, slot, client style registration, or Web surface. The standalone CLI can emit an unserved static `receipt.html` with inline presentation CSS; that is not a DSH client surface. Client asset HTTP, style-node disposal, browser console/page/request errors, fork UI geometry/navigation, screenshots, and GIFs are `NOT_APPLICABLE_NO_WEB_SURFACE`. No substitute or fabricated screenshot exists.
 
 ## Limits
 
 - The DSH tool only displays an already-completed, strictly validated receipt. It never runs an audit, unloads a live target plugin, or reads session/model/tool history.
+- The Stage 3 gate validates the resolved tool definition directly, not the full model-facing ToolRuntime dispatch pipeline; it uses the same strict parser implementation in a separate source copy rather than an independent parser implementation.
 - This gate proves the installed host-only DSH integration and exact tool-registration disposal. Engine coverage remains limited to the Cordis-managed categories and versions declared in `README.md` and `docs/release-evidence.md`.
-- Claude review and repository-age eligibility remain separate gates. This Stage 3 `PASS` does not authorize a PR.
+- Claude R3 engine, R4A viewer, R4B Stage 3, and R5 aggregate-final reviews are validated `GO`; repository-age, target-list rules, and focused PR diff remain separate gates. This Stage 3 `PASS` and Claude technical `GO` do not authorize a PR.

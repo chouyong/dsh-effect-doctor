@@ -46,4 +46,4 @@ This preregistration is the Stage 0 contract. It records expected machine outcom
 - Stage 1: typecheck, build, CLI contract, unit tests, and real Cordis tests pass with zero skips.
 - Stage 2: isolated child-process gate passes all seven preregistered receipts at final cleanup-precedence source commit `b638cdd55e1fdb1c39e9b1f8eaab3070d737f55d`; exact hashes are in `docs/STAGE_2_ISOLATED_GATE.md`.
 - Stage 3: prebuilt bundle installation, real DSH composition, real Loader registration/execution, receipt consistency, and precise doctor disposal pass at final cleanup-precedence source commit `b638cdd55e1fdb1c39e9b1f8eaab3070d737f55d`; exact hashes are in `docs/STAGE_3_DSH_GATE.md`.
-- Release classification: `PASS_AFTER_CHANGES`; post-fix Claude review, Claude final `GO`, and repository-age eligibility remain open.
+- Release classification: `PASS_AFTER_CHANGES`; focused Claude R3 engine, R4A viewer, R4B Stage 3, and R5 aggregate-final reviews are validated `GO`. Repository-age, target-list rules, and focused PR diff remain open, so publication stays fail-closed.

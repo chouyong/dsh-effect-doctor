@@ -19,12 +19,12 @@
 | Build/typecheck/tests | `PASS` | `npm run verify`: unit `17/17`, real `4/4`, seven receipts, zero skips |
 | Plugin installation | `PASS` | Fresh D-drive profile, prebuilt tarball, no fallback |
 | Bundle composition | `PASS` | Installed `dsh-effect-doctor` layer in real DSH dump-config |
-| Tool execution | `PASS` | Registered tool output/schema/render match the completed receipt |
+| Tool execution | `PASS` | Real ToolRuntime resolves the definition; direct execute/render matches the separately read strict-parser summary; `{}` schema proves JSON-safety only |
 | Plugin disposer | `PASS` | Disposing only the doctor entry removes the tool registration |
-| Runtime client/style/errors | `NOT_APPLICABLE_NO_WEB_SURFACE` | No client export or browser bundle exists |
+| Runtime client/style/errors | `NOT_APPLICABLE_NO_WEB_SURFACE` | No DSH client export, browser bundle, or client style registration exists; static receipt HTML is unserved CLI output |
 | Fork/geometry/navigation | `NOT_APPLICABLE_PRODUCT_SCOPE` | Product is a host-only cleanup receipt viewer, not a fork visualization |
 | Genuine screenshots | `NOT_APPLICABLE_NO_WEB_SURFACE` | No screenshots or GIFs were created |
-| Commit/push/PR | `PARTIAL_WAITING_ELIGIBILITY` | 15 functional commits pushed; PR forbidden pending age and Claude final `GO` |
+| Commit/push/PR | `PARTIAL_WAITING_ELIGIBILITY` | 17 genuine commits after final review closeout; PR forbidden pending age, target-list rules, and focused diff |
 
 The canonical Stage 3 commands, machine summary, checks, hashes, and limitations are in `docs/STAGE_3_DSH_GATE.md`.
 
@@ -44,7 +44,8 @@ No formal `b638cdd` install fallback or runtime retry was needed after these sou
 - Secret persisted: `false`
 - Session/product state changed: none; only the isolated D-drive profile and generated evidence were created
 - Processes stopped: none; the bounded dump-config child and Loader process exited normally
-- Remaining gaps: post-fix Claude independent review, Claude final aggregate `GO`, and GitHub 24-hour repository-age eligibility
+- Claude final technical review: R5 aggregate `GO`, receipt SHA-256 `fe4c3003e181c4ffafded368a5c0b43e41844780a1f3c1c23ab5bd73d7b0dcf1`
+- Remaining gaps: GitHub 24-hour repository-age eligibility, target-list rules, and focused PR diff
 
 ## Publication
 
