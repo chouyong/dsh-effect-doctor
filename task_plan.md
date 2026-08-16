@@ -15,8 +15,10 @@ Complete Stage 0 technical validation and, if the observable Cordis surfaces are
 ## Current gates
 
 - PR publication: `WAITING_ELIGIBILITY` until GitHub creation age, 10 real commits, and Claude `GO` are all proven.
-- Claude review: not started; prohibited until implementation and evidence are stable.
+- Claude review: broad R1 is preserved as `NO_RESULT_TIMEOUT`; engine R1A returned `GO` for the pre-fix tree, and a distinct post-fix R2 plus remaining focused evidence review are required.
 - GitHub repository: created with explicit authorization as public `chouyong/dsh-effect-doctor`; PR publication remains fail-closed.
+- Current publication identity: local `HEAD`, refreshed `origin/main`, and GitHub API `main` all resolve to `004fe47cd343163e9e945b226966436fcb0bdd35`; 13 genuine commits are present and the branch difference is `0/0`.
+- Post-fix Stage 3: fresh-profile install and real Loader gate pass at `004fe47`; raw Stage 2/3 evidence is independently hash-closed, and checked-in authority documents are being stabilized before Claude R2.
 
 ## Errors Encountered
 
@@ -40,3 +42,6 @@ Complete Stage 0 technical validation and, if the observable Cordis surfaces are
 | Minimal DSH Loader tree failed with only outer `AggregateError` | 1 | `app-boot` rolled back the root context; add bounded nested cause/error reporting to identify the exact failing entry before changing configuration. |
 | Node 25 rejected Windows drive paths as Loader ESM specifiers | 1 | Convert only the three module names to canonical `file:///` URLs; keep `receiptPath` as a filesystem path and rerun with a new evidence directory. |
 | Real Loader boot reached execution but `resolve('effect-doctor')` missed the nested entry | 1 | CodeGraph proved app boot pins a root `include` entry; resolve the public nested id `include:effect-doctor` and rerun in a new directory. |
+| Broad Claude R1 produced no receipt before the 334.1-second outer timeout | 1 | Classified `NO_RESULT_TIMEOUT`, proved no receipt/orphan process, preserved R1, and split review into sequential single-question notices. |
+| R1A dry-run found the shared Claude mutex held | 1 | Process audit proved the owner is a later, separate `dsh-branch-review` terminal chain; left it untouched and wait for natural release before retrying dry-run. |
+| Stage 3 independent-check batch used a fail-fast `Promise.all` around an expected non-zero overwrite negative test | 1 | Preserve the observed exit `1` and exact non-overwrite diagnostic; do not repeat that negative test, and rerun only the hidden independent hash/check verification as a separate command. |
