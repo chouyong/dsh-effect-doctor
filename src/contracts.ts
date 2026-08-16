@@ -75,6 +75,7 @@ export interface ErrorSummary {
 }
 
 export interface SupportFailure {
+  supported: false
   outcome: 'UNVERIFIABLE_VERSION' | 'UNVERIFIABLE_SURFACE'
   reason: string
 }

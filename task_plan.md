@@ -26,3 +26,6 @@ Complete Stage 0 technical validation and, if the observable Cordis surfaces are
 | Initial `gh repo view chouyong/dsh-effect-doctor` returned repository not found | 1 | Confirmed the remote did not exist; asked for visibility, then created it after explicit Public authorization. |
 | `git diff --cached --check` found blank lines at EOF in two documents | 1 | Removed only the extra terminal blank lines with `apply_patch`; rerun the cached diff check before commit. |
 | Scaffold cached diff check found blank lines at EOF in five new files | 1 | Removed only the terminal blank lines; rerun the cached diff check without repeating the failed aggregate. |
+| Post-commit graphify hook warned about an ignored null byte | 1 | Applied Windows release evidence triage; commit/push were successful and the hook's background rebuild also completed. |
+| One parallel local Git observer reported dubious ownership | 1 | Used command-scoped `-c safe.directory=...` for read-only object/ref verification; did not change global config. |
+| First real adapter probe rejected Cordis's callable logger service | 1 | Expanded the structural predicate to accept non-null objects and functions; rerun build and the real adapter probe. |

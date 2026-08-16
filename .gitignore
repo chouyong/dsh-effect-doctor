@@ -3,5 +3,6 @@ dist/
 coverage/
 artifacts/
 .tmp/
+.codegraph/
 .meta-kim/
 graphify-out/

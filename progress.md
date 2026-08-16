@@ -16,4 +16,9 @@
 - Ran a real vendored-Cordis import probe: clean mount/dispose returned registry size to zero, target uid to `null`, state to `DISPOSED`, and root effects to empty.
 - Began Stage 1 with the package/TypeScript scaffold and versioned receipt/outcome/adapter contracts.
 - Installed three development packages with `npm install --ignore-scripts --legacy-peer-deps`; initial `npm run typecheck` passed.
+- Classified the post-commit graphify null-byte warning as `secondary_warning`: local commit object, exact 11-file set, local refs, remote API SHA, and pushed remote files all resolve to `e49490b`; the background graph rebuild completed successfully.
+- One read-only Git observer ran under a different ownership context and rejected the repository as dubious; a command-scoped `safe.directory` check completed without changing global Git config.
+- Initialized this developing repository with `codegraph init -i`; the initial index contains the two current TypeScript source files.
+- First real adapter probe correctly mounted and returned clean resources to baseline, but exposed a shape-check bug: Cordis logger is callable. Recorded the failure before patching the predicate.
+- Corrected callable-service probing. Typecheck, build, and the expanded real adapter probe pass: baseline `3`, mounted `13`, after `3`, with effect/fiber/listener/runtime/service categories all observed.
 - No Claude request, GitHub write, PR, cleanup, reset, or cross-repository modification performed.
