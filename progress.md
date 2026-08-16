@@ -29,4 +29,5 @@
 - Real CLI checks pass with exit `0/20/30` for clean/leaky/unknown; two independent clean JSON receipts have identical SHA-256 `2E7FB141CC24C7180CF4972A486EF0EC0DFA0C2C034F62DAB3C19E1240587D9A`.
 - Added formal contract/engine tests and real vendored-Cordis tests. `npm run verify` passes with unit `9/9`, real `4/4`, and `skipped: 0` in both suites.
 - Added the Stage 2 isolated real-gate runner with scrubbed child environments, exact child ownership, bounded parent timeout, exit/receipt/hash validation, and deterministic summary output. Typecheck passes; runtime evidence will be generated after committing the runner so its source SHA is exact.
+- Full `npm run verify` passed at `0b1e7c0`; Stage 2 generated seven validated receipts and `gate-summary.json`. Independent hash and privacy checks passed, and `docs/STAGE_2_ISOLATED_GATE.md` records the stable evidence.
 - No Claude request, GitHub write, PR, cleanup, reset, or cross-repository modification performed.

@@ -5,10 +5,10 @@
 - Visibility: `public`
 - GitHub `created_at`: `2026-08-16T11:35:15Z`
 - Earliest 24-hour eligibility: `2026-08-17T11:35:15Z`
-- Current product commit count after the isolated-runner milestone: `8`
+- Current product commit count after the Stage 2 evidence milestone: `9`
 - Required product commit count: at least `10` real functional commits
 - Stage 0 decision: `GO_ENGINE`
-- Stage 1–3 runtime evidence: pending
+- Stage 1–2 runtime evidence: passed; Stage 3 pending
 - Claude final technical review: pending; no `GO`
 - Awesome-list PR status: `WAITING_ELIGIBILITY`
 

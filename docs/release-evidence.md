@@ -43,4 +43,6 @@ This preregistration is the Stage 0 contract. It records expected machine outcom
 ## Outcome
 
 - Stage 0: `GO_ENGINE`.
-- Release outcome: pending implementation and Stage 1–3 gates; do not label `FIRST_PASS` or `PASS_AFTER_CHANGES` yet.
+- Stage 1: typecheck, build, CLI contract, unit tests, and real Cordis tests pass with zero skips.
+- Stage 2: isolated child-process gate passes all seven preregistered receipts at source commit `0b1e7c0a8b0898740bfce7007b3350c65c1a7f74`; exact hashes are in `docs/STAGE_2_ISOLATED_GATE.md`.
+- Release classification to date: `PASS_AFTER_CHANGES`; Stage 3 DSH integration and later Claude review remain open.
