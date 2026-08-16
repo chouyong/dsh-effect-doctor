@@ -4,17 +4,17 @@
 
 - Gate result: `PASS` for the installed host-only receipt tool.
 - Release classification: `PASS_AFTER_CHANGES`.
-- Product source commit: `004fe47cd343163e9e945b226966436fcb0bdd35`.
+- Product source commit: `b638cdd55e1fdb1c39e9b1f8eaab3070d737f55d`.
 - DSH source commit: `47f943859bef60e4160492346772ded9b24f765a`.
-- DSH profile: `effect-doctor-stage3-004fe47` under `artifacts/stage-3/004fe47/dsh-home` on `D:`.
-- Machine summary: `artifacts/stage-3/004fe47/runtime-gate/gate-summary.json`.
-- Machine summary SHA-256: `3ff74b1b5cb4d335d27f3f52234b5d2d60de158b72cf4258651f43d75e42f37c`.
+- DSH profile: `effect-doctor-stage3-b638cdd` under `artifacts/stage-3/b638cdd/dsh-home` on `D:`.
+- Machine summary: `artifacts/stage-3/b638cdd/runtime-gate/gate-summary.json`.
+- Machine summary SHA-256: `42236dd8889feda51938a6f8a7846dab3ff1f36dd83b05f3603a5d6b1e448e63`.
 
 ## Build and installation
 
 - A clean fixture receipt was regenerated from the committed source and DSH vendored Cordis `4.0.1`; it returned `PASS` / exit `0`.
-- `npm pack --pack-destination artifacts/stage-3/004fe47 --json` produced a prebuilt 27-file tarball. It contained the bundle patch, README, package manifest, CLI/library output, the post-fix engine, and DSH plugin output; it contained no tests or generated evidence.
-- `pnpm dsh plugin --profile effect-doctor-stage3-004fe47 add <tarball>` initialized a fresh profile and installed the package plus three published dependencies on its first attempt. No build-script allowance, Git-install fallback, source-link fallback, or active profile mutation was used.
+- `npm pack --pack-destination artifacts/stage-3/b638cdd --json` produced a prebuilt 27-file tarball. It contained the bundle patch, README, package manifest, CLI/library output, the final cleanup-precedence engine, and DSH plugin output; it contained no tests or generated evidence.
+- `pnpm dsh plugin --profile effect-doctor-stage3-b638cdd add <tarball>` initialized a fresh profile and installed the package plus three published dependencies on its first attempt. No build-script allowance, Git-install fallback, source-link fallback, or active profile mutation was used.
 - The committed Stage 3 gate invoked the real DSH source CLI to dump the installed profile composition. It found the `# == dsh-effect-doctor` layer, `dsh-effect-doctor/dsh-plugin`, and the configured `$DSH_HOME/effect-doctor/latest/receipt.json` path.
 
 ## Runtime checks
@@ -41,16 +41,16 @@ After the Stage 3 run, `npm run verify` passed again: unit tests `17/17`, real C
 
 | Artifact | SHA-256 |
 |---|---|
-| Tarball | `c31bbc33d9852f0202a7630fc7b26845b3fe056bae1ac13c7a2c2e15b24f1767` |
+| Tarball | `e2380f24d56f5071bc47b1cb7a382bb0abe2ad3dfcb40c8682983a41d974f72b` |
 | Installed `dsh-plugin.js` | `034c33d9bc8ba535f8dd569bbfc06ba5de9f25ed03863d8f416812e8fbfa35e0` |
 | Clean JSON receipt | `d1824d2a59506cfa025d7606176447633de73f3bf44866c2e54e3d1ada2f6746` |
 | DSH vendored Cordis module | `1729cdbf8ee40b17c8839e06bf96491490548559e11ef7e411271e0754e751c5` |
 | Dumped installed composition | `8a661796bdb78600a4c482cfb5d8a82a282ff77f8b2f8d39b1e4d054632c27a0` |
-| Minimal Loader configuration | `fd0009d43c1607d04c413cae49465d146514d61391ed8bddae669c535ff85145` |
+| Minimal Loader configuration | `5dbdfb194e503ebe483f26ad4371c532db12a82cfdc5729ee769ecc93ff3de8a` |
 
 All six artifact hashes and every summary boolean were independently recomputed after the gate. The summary property-name audit found no API key, credential, secret, password, cookie, or authorization fields.
 
-The earlier `artifacts/stage-3/cd0d0f7` sealed run remains preserved as historical pre-fix evidence. It is not the release artifact identity after the exercise-timeout cleanup change.
+The earlier `artifacts/stage-3/cd0d0f7` and `artifacts/stage-3/004fe47` sealed runs remain preserved as historical evidence. Neither is the final release artifact identity after the exercise-timeout cleanup and cleanup-error precedence changes.
 
 ## Web and screenshot classification
 

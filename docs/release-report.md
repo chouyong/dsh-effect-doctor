@@ -7,10 +7,10 @@
 ## Scope and Identity
 
 - Repository: `chouyong/dsh-effect-doctor`
-- Source commit: `004fe47cd343163e9e945b226966436fcb0bdd35`
+- Source commit: `b638cdd55e1fdb1c39e9b1f8eaab3070d737f55d`
 - Plugin artifact: prebuilt `dsh-effect-doctor-0.1.0.tgz`; identity recorded in `docs/STAGE_3_DSH_GATE.md`
 - DSH runtime: source commit `47f943859bef60e4160492346772ded9b24f765a`, vendored Cordis `4.0.1`
-- Effective home/profile: `artifacts/stage-3/004fe47/dsh-home` / `effect-doctor-stage3-004fe47`
+- Effective home/profile: `artifacts/stage-3/b638cdd/dsh-home` / `effect-doctor-stage3-b638cdd`
 
 ## Gate Results
 
@@ -24,7 +24,7 @@
 | Runtime client/style/errors | `NOT_APPLICABLE_NO_WEB_SURFACE` | No client export or browser bundle exists |
 | Fork/geometry/navigation | `NOT_APPLICABLE_PRODUCT_SCOPE` | Product is a host-only cleanup receipt viewer, not a fork visualization |
 | Genuine screenshots | `NOT_APPLICABLE_NO_WEB_SURFACE` | No screenshots or GIFs were created |
-| Commit/push/PR | `PARTIAL_WAITING_ELIGIBILITY` | 13 functional commits pushed; PR forbidden pending age and Claude final `GO` |
+| Commit/push/PR | `PARTIAL_WAITING_ELIGIBILITY` | 15 functional commits pushed; PR forbidden pending age and Claude final `GO` |
 
 The canonical Stage 3 commands, machine summary, checks, hashes, and limitations are in `docs/STAGE_3_DSH_GATE.md`.
 
@@ -37,7 +37,7 @@ The canonical Stage 3 commands, machine summary, checks, hashes, and limitations
 - Windows Node 25 required Loader module names as `file:///` URLs rather than drive-letter paths.
 - DSH app boot nests configured entries below its pinned `include` entry; the disposer gate now resolves `include:effect-doctor`.
 
-No formal `004fe47` install fallback or runtime retry was needed after these source and gate corrections. The earlier `cd0d0f7` sealed artifacts remain preserved as pre-fix history. The historical corrections permanently require `PASS_AFTER_CHANGES`.
+No formal `b638cdd` install fallback or runtime retry was needed after these source and gate corrections. The earlier `cd0d0f7` and `004fe47` sealed artifacts remain preserved as history. The historical corrections permanently require `PASS_AFTER_CHANGES`.
 
 ## Secrets and Side Effects
 
@@ -48,6 +48,6 @@ No formal `004fe47` install fallback or runtime retry was needed after these sou
 
 ## Publication
 
-- Commit SHA: `004fe47cd343163e9e945b226966436fcb0bdd35`
+- Commit SHA: `b638cdd55e1fdb1c39e9b1f8eaab3070d737f55d`
 - PR URLs: none; status `WAITING_ELIGIBILITY`
 - Screenshot paths: none; `NOT_APPLICABLE_NO_WEB_SURFACE`

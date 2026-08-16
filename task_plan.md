@@ -17,8 +17,9 @@ Complete Stage 0 technical validation and, if the observable Cordis surfaces are
 - PR publication: `WAITING_ELIGIBILITY` until GitHub creation age, 10 real commits, and Claude `GO` are all proven.
 - Claude review: broad R1 is preserved as `NO_RESULT_TIMEOUT`; engine R1A returned `GO` for the pre-fix tree, and a distinct post-fix R2 plus remaining focused evidence review are required.
 - GitHub repository: created with explicit authorization as public `chouyong/dsh-effect-doctor`; PR publication remains fail-closed.
-- Current publication identity: local `HEAD`, refreshed `origin/main`, and GitHub API `main` all resolve to `004fe47cd343163e9e945b226966436fcb0bdd35`; 13 genuine commits are present and the branch difference is `0/0`.
-- Post-fix Stage 3: fresh-profile install and real Loader gate pass at `004fe47`; raw Stage 2/3 evidence is independently hash-closed, and checked-in authority documents are being stabilized before Claude R2.
+- Current publication identity: local `HEAD`, refreshed `origin/main`, and GitHub API `main` all resolve to `b638cdd55e1fdb1c39e9b1f8eaab3070d737f55d`; 15 genuine commits are present and the branch difference is `0/0`.
+- Final cleanup-precedence Stage 3: fresh-profile install and real Loader gate pass at `b638cdd`; raw Stage 2/3 evidence is independently hash-closed, and checked-in authority documents are being stabilized before a distinct final-tree engine review.
+- Claude R2 engine: validated `GO` for the `004fe47` cleanup fix, but exposed a real logger-only disposer-error precedence mismatch. Codex fixed it and added a regression sub-case; because source changed after R2, a distinct post-fix engine review remains required.
 
 ## Errors Encountered
 
@@ -45,3 +46,4 @@ Complete Stage 0 technical validation and, if the observable Cordis surfaces are
 | Broad Claude R1 produced no receipt before the 334.1-second outer timeout | 1 | Classified `NO_RESULT_TIMEOUT`, proved no receipt/orphan process, preserved R1, and split review into sequential single-question notices. |
 | R1A dry-run found the shared Claude mutex held | 1 | Process audit proved the owner is a later, separate `dsh-branch-review` terminal chain; left it untouched and wait for natural release before retrying dry-run. |
 | Stage 3 independent-check batch used a fail-fast `Promise.all` around an expected non-zero overwrite negative test | 1 | Preserve the observed exit `1` and exact non-overwrite diagnostic; do not repeat that negative test, and rerun only the hidden independent hash/check verification as a separate command. |
+| Final authority validator passed multiple `Get-Content -Raw` files into vectorized `-notmatch` | 1 | Preserve the UTF-8/marker/diff results, classify the missing-hash list as a wrapper false positive, and rerun with explicit joined text before matching required values. |
