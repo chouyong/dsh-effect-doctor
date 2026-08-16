@@ -18,11 +18,12 @@
   },
   "scripts": {
     "build": "tsc -p tsconfig.json",
+    "gate:real": "node dist/scripts/real-gate.js",
     "typecheck": "tsc -p tsconfig.json --noEmit",
     "test": "node --test dist/tests/contracts.test.js dist/tests/engine.test.js",
     "test:real": "node --test dist/tests/real-cordis.test.js",
     "verify:cli": "node dist/src/cli.js --help",
-    "verify": "npm run typecheck && npm run build && npm run test && npm run verify:cli && npm run test:real"
+    "verify": "npm run typecheck && npm run build && npm run test && npm run verify:cli && npm run test:real && npm run gate:real"
   },
   "devDependencies": {
     "@types/node": "^22.20.0",
