@@ -270,6 +270,22 @@ test('exercise timeout still disposes the mounted fiber', async () => {
   })
   assert.equal(rejectingResult.outcome, 'FAIL_DISPOSE')
   assert.ok(rejectingResult.errors.some(error => error.phase === 'unmount'))
+
+  const loggedContext = context()
+  const loggedResult = await runAudit({
+    adapter: new FakeAdapter(),
+    context: loggedContext,
+    runtime,
+    configuration: { ...configuration, operationTimeoutMs: 10 },
+    fixture: {
+      ...fixture('exercise-timeout-logged-dispose-failure', (value) => ({
+        dispose: () => { value.loggedErrors += 1 },
+      })),
+      exercise: () => new Promise<void>(() => {}),
+    },
+  })
+  assert.equal(loggedResult.outcome, 'FAIL_DISPOSE')
+  assert.ok(loggedResult.errors.some(error => error.phase === 'unmount'))
 })
 
 test('existing single-run lock fails without mounting', async () => {

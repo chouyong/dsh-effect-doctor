@@ -237,18 +237,6 @@ export async function runAudit<Context, Fiber>(
     }
   }
 
-  if (primaryFailure !== undefined) {
-    return receipt(
-      options.runtime,
-      options.fixture.name,
-      configuration,
-      phases,
-      emptyDelta(),
-      errors,
-      primaryFailure,
-    )
-  }
-
   if (errors.some(error => error.phase === 'unmount')) {
     return receipt(
       options.runtime,
@@ -258,6 +246,18 @@ export async function runAudit<Context, Fiber>(
       emptyDelta(),
       errors,
       'FAIL_DISPOSE',
+    )
+  }
+
+  if (primaryFailure !== undefined) {
+    return receipt(
+      options.runtime,
+      options.fixture.name,
+      configuration,
+      phases,
+      emptyDelta(),
+      errors,
+      primaryFailure,
     )
   }
 
