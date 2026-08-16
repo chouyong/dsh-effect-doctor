@@ -7,8 +7,8 @@ Complete Stage 0 technical validation and, if the observable Cordis surfaces are
 ## Phases
 
 - [complete] Stage 0: preregister evidence and prove `GO_ENGINE` or close `NO_GO_UNRELIABLE_SURFACE`
-- [in_progress] Stage 1: scaffold engine, adapter, schema, fixtures, and verification commands
-- [pending] Stage 2: run isolated runner and capture machine-readable receipts
+- [complete] Stage 1: scaffold engine, adapter, schema, fixtures, and verification commands
+- [in_progress] Stage 2: run isolated runner and capture machine-readable receipts
 - [pending] Stage 3: add optional read-only DSH surface and real runtime evidence
 - [pending] Stage 4: stabilize evidence, run Claude review, and prepare only eligible publication artifacts
 

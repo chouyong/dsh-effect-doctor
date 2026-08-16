@@ -19,8 +19,8 @@
   "scripts": {
     "build": "tsc -p tsconfig.json",
     "typecheck": "tsc -p tsconfig.json --noEmit",
-    "test": "node --test dist/tests/*.test.js",
-    "test:real": "node dist/scripts/real-gate.js",
+    "test": "node --test dist/tests/contracts.test.js dist/tests/engine.test.js",
+    "test:real": "node --test dist/tests/real-cordis.test.js",
     "verify:cli": "node dist/src/cli.js --help",
     "verify": "npm run typecheck && npm run build && npm run test && npm run verify:cli && npm run test:real"
   },

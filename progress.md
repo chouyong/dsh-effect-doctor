@@ -27,4 +27,5 @@
 - All six fixtures pass real vendored-Cordis outcome checks: clean `PASS`, leaky `FAIL_LEAK`, throwing `FAIL_DISPOSE`, hanging `FAIL_TIMEOUT`, startup `FAIL_MOUNT`, unknown `UNVERIFIABLE_VERSION`.
 - Added the CLI, runtime package/version/hash loader, atomic JSON/Markdown/HTML receipt writers, and package bin contract.
 - Real CLI checks pass with exit `0/20/30` for clean/leaky/unknown; two independent clean JSON receipts have identical SHA-256 `2E7FB141CC24C7180CF4972A486EF0EC0DFA0C2C034F62DAB3C19E1240587D9A`.
+- Added formal contract/engine tests and real vendored-Cordis tests. `npm run verify` passes with unit `9/9`, real `4/4`, and `skipped: 0` in both suites.
 - No Claude request, GitHub write, PR, cleanup, reset, or cross-repository modification performed.
