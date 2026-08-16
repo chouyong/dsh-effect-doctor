@@ -13,6 +13,9 @@
       "default": "./dist/src/index.js"
     }
   },
+  "bin": {
+    "dsh-effect-doctor": "./dist/src/cli.js"
+  },
   "scripts": {
     "build": "tsc -p tsconfig.json",
     "typecheck": "tsc -p tsconfig.json --noEmit",

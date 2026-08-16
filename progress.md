@@ -25,4 +25,6 @@
 - Engine validation now passes against real vendored Cordis: clean => `PASS`; retained root sibling => `FAIL_LEAK`; logged throwing disposer => `FAIL_DISPOSE`; hanging disposer => `FAIL_TIMEOUT`; version `0.0.0` => `UNVERIFIABLE_VERSION`.
 - Added the fixture set; its first typecheck exposed a fixture-only recursive thenable declaration, now narrowed to the only behavior fixtures need: awaitable completion.
 - All six fixtures pass real vendored-Cordis outcome checks: clean `PASS`, leaky `FAIL_LEAK`, throwing `FAIL_DISPOSE`, hanging `FAIL_TIMEOUT`, startup `FAIL_MOUNT`, unknown `UNVERIFIABLE_VERSION`.
+- Added the CLI, runtime package/version/hash loader, atomic JSON/Markdown/HTML receipt writers, and package bin contract.
+- Real CLI checks pass with exit `0/20/30` for clean/leaky/unknown; two independent clean JSON receipts have identical SHA-256 `2E7FB141CC24C7180CF4972A486EF0EC0DFA0C2C034F62DAB3C19E1240587D9A`.
 - No Claude request, GitHub write, PR, cleanup, reset, or cross-repository modification performed.
