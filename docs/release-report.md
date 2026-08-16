@@ -24,7 +24,7 @@
 | Runtime client/style/errors | `NOT_APPLICABLE_NO_WEB_SURFACE` | No DSH client export, browser bundle, or client style registration exists; static receipt HTML is unserved CLI output |
 | Fork/geometry/navigation | `NOT_APPLICABLE_PRODUCT_SCOPE` | Product is a host-only cleanup receipt viewer, not a fork visualization |
 | Genuine screenshots | `NOT_APPLICABLE_NO_WEB_SURFACE` | No screenshots or GIFs were created |
-| Commit/push/PR | `PARTIAL_WAITING_ELIGIBILITY` | 17 genuine commits after final review closeout; PR forbidden pending age, target-list rules, and focused diff |
+| Commit/push/PR | `PARTIAL_WAITING_ELIGIBILITY` | 18 genuine commits after goal completion audit; PR forbidden pending age, target-list rules, and focused diff |
 
 The canonical Stage 3 commands, machine summary, checks, hashes, and limitations are in `docs/STAGE_3_DSH_GATE.md`.
 

@@ -11,7 +11,7 @@ Complete Stage 0 technical validation and, if the observable Cordis surfaces are
 - [complete] Stage 2: run isolated runner and capture machine-readable receipts
 - [complete] Stage 3: add optional read-only DSH surface and real runtime evidence
 - [complete] Stage 4: stabilize evidence, run Claude review, and prepare only eligible publication artifacts
-- [in_progress] Stage 5: wait for real repository age, then check target-list rules and focused PR diff before any PR
+- [complete] Stage 5: enforce the current age gate and leave any future target-list/PR workflow explicitly out of scope until eligible
 
 ## Current gates
 
@@ -53,3 +53,4 @@ Complete Stage 0 technical validation and, if the observable Cordis surfaces are
 | Isolated post-Claude verify required the Stage 2 summary to byte-match the main-worktree hash | 1 | Preserve the full PASS and matching `b638cdd` source identity; compare the two JSON summaries to classify path-dependent receipt hashes from the junction environment, while retaining the independently unchanged Stage 3 hash closure. |
 | PowerShell `Remove-Item` threw `NullReferenceException` on the validated temporary junction | 1 | Confirm zero deletion, do not switch shells, and remove only the same verified junction paths with `.NET Directory.Delete(path, false)` before unregistering the temporary worktree. |
 | Final closeout validator concatenated Git's string commit count with integer `1` as `161` | 1 | Preserve all passing receipt/UTF-8/product/authority/diff results and rerun only the prospective-count expression with an explicit `[int]` cast. |
+| Goal completion audit script failed JavaScript parsing on Markdown backticks embedded in a template literal | 1 | Confirm no nested audit command started, replace backtick-containing exact strings with PowerShell regex/character-safe checks, and retain settled outputs for independent evidence channels. |
