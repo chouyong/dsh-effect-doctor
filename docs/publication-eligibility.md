@@ -8,8 +8,8 @@
 - Current product commit count after the read-only DSH tool milestone: `10`
 - Required product commit count: at least `10` real functional commits
 - Stage 0 decision: `GO_ENGINE`
-- Stage 1–2 runtime evidence: passed; Stage 3 install/composition passed, runtime execution/disposal pending
+- Stage 1–3 runtime evidence: passed; Stage 3 exact hashes and checks are in `docs/STAGE_3_DSH_GATE.md`
 - Claude final technical review: pending; no `GO`
 - Awesome-list PR status: `WAITING_ELIGIBILITY`
 
-The 24-hour timestamp is necessary but not sufficient. A PR remains forbidden until every listed technical, evidence, commit-count, target-list, and Claude condition passes.
+The 24-hour timestamp is necessary but not sufficient. The repository is not yet old enough and Claude has not reviewed it. A PR remains forbidden until every listed technical, evidence, target-list, and Claude condition passes.
