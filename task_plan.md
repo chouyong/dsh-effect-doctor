@@ -63,3 +63,4 @@ Complete Stage 0 technical validation and, if the observable Cordis surfaces are
 | PowerShell wrapper used Bash `<<<` syntax | 1 | Parsing failed before the nested API call; no side effect occurred and the check was rerun with native PowerShell arguments. |
 | Shallow merge-base was insufficient for fork synchronization | 1 | Did not infer ancestry from incomplete history; used the verified remote candidate and recorded the limitation. |
 | Final PR-status wrapper split multi-token `gh --jq` expressions under PowerShell | 1 | The read-only formatting calls failed before returning PR data and caused no write; rerun with native `ConvertFrom-Json` property access. |
+| GitHub REST temporarily returned `mergeable: null` for PR 1447 during final polling | 1 | Treat the field as a transient server recomputation state, not a merge verdict; preserve the already-proven clean state and recheck through the PR view API without changing the PR. |
