@@ -19,7 +19,7 @@ Complete Stage 0 technical validation and, if the observable Cordis surfaces are
 - PR publication: `SUBMITTED`; both PRs are open, non-draft, and mergeable. PR 1's submission gate and configured check pass; PR 2 has no automatic PR check because its lint workflow is manual-only.
 - Claude review: broad R1 is preserved as `NO_RESULT_TIMEOUT`; R1A/R2 are historical narrow `GO`; final-tree R3 engine, R4A viewer/tool, R4B Stage 3 evidence, and R5 aggregate are validated `GO`.
 - GitHub repository: created with explicit authorization as public `chouyong/dsh-effect-doctor`; PR publication was fail-closed until the recorded age gate, then passed the remaining checks.
-- Current publication identity: local `HEAD`, refreshed `origin/main`, and GitHub API `main` all resolve to `521ec6798bd3fa27dd316647777c46b8c7d24c43`; 18 genuine commits are present and the branch difference is `0/0`.
+- Current publication identity: local `HEAD`, refreshed `origin/main`, and GitHub API `main` all resolve to `1f3ceaf40691a8ff2523f6502c990ab001d2191a`; 19 genuine commits are present and the branch difference is `0/0`.
 - Final cleanup-precedence Stage 3: fresh-profile install and real Loader gate pass at `b638cdd`; raw Stage 2/3 evidence and checked-in authority documents are independently hash-closed.
 - Claude R2 engine: historical `GO` for the `004fe47` cleanup fix that exposed the logger-only disposer-error precedence mismatch; Codex fixed it in `b638cdd`, and final-tree R3 subsequently closed the finding with `GO`.
 - Claude final review: R3 engine, R4A viewer, R4B Stage 3, and R5 aggregate receipts are each validated `GO`; R5 SHA-256 is `fe4c3003e181c4ffafded368a5c0b43e41844780a1f3c1c23ab5bd73d7b0dcf1`.
