@@ -49,6 +49,6 @@ No formal `b638cdd` install fallback or runtime retry was needed after these sou
 
 ## Publication
 
-- Commit SHA: `1f3ceaf40691a8ff2523f6502c990ab001d2191a`
+- Product source SHA: `b638cdd55e1fdb1c39e9b1f8eaab3070d737f55d`; PR-submission main baseline: `521ec6798bd3fa27dd316647777c46b8c7d24c43`
 - PR URLs: `https://github.com/awesome-dsh-plugin/awesome-dsh-plugin/pull/1447` and `https://github.com/0xsline/awesome-deepseek-harness/pull/370`; both `OPEN`, non-draft, and mergeable at verification time
 - Screenshot paths: none; `NOT_APPLICABLE_NO_WEB_SURFACE`

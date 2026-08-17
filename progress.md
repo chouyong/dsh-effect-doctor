@@ -79,7 +79,7 @@
 
 ## 2026-08-17
 
-- Rechecked the publication gate after the real 24-hour instant: product main was `521ec6798bd3fa27dd316647777c46b8c7d24c43` before the publication-record commit, then advanced to `1f3ceaf40691a8ff2523f6502c990ab001d2191a`; 19 genuine commits now match local/origin/GitHub refs and the `dsh-plugin` topic is confirmed.
+- Rechecked the publication gate after the real 24-hour instant: product main was `521ec6798bd3fa27dd316647777c46b8c7d24c43` with 18 genuine commits and matching local/origin/GitHub refs at PR creation; the `dsh-plugin` topic is confirmed. Later publication-record commits do not alter the already-proven submission threshold.
 - Built and locally checked two focused target-list candidates. PR 1's README/list/config diff passed `awesome-lint`, site build, and submission gate; PR 2's bilingual Markdown-only diff passed its rule checks and has no automatic PR workflow (`lint.yml` is manual-only).
 - Pushed both candidate branches non-force and opened PR 1 `https://github.com/awesome-dsh-plugin/awesome-dsh-plugin/pull/1447` (head `998dcac9d34b1b2ce9ad1a34b2909588ab11e995`) and PR 2 `https://github.com/0xsline/awesome-deepseek-harness/pull/370` (head `05140a7fa16d2db2ce7802fe46e562034c681a83`). Both are open, non-draft, and mergeable.
 - PR 1's initial HTTPS push was rejected by OAuth's missing `workflow` scope; no credential escalation or force-push followed, and the retry over BatchMode SSH succeeded. A first full clone timeout, absolute-path lint misparse, shallow-build refusal, missing baseline-ref API, Bash-only wrapper syntax, and shallow merge-base limitation were all recorded in `task_plan.md` without repeating failed commands.
