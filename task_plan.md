@@ -62,3 +62,4 @@ Complete Stage 0 technical validation and, if the observable Cordis surfaces are
 | Baseline-ref API lookup returned 404 | 1 | Recorded the absent optional ref, made no remote write, and continued with the verified candidate base. |
 | PowerShell wrapper used Bash `<<<` syntax | 1 | Parsing failed before the nested API call; no side effect occurred and the check was rerun with native PowerShell arguments. |
 | Shallow merge-base was insufficient for fork synchronization | 1 | Did not infer ancestry from incomplete history; used the verified remote candidate and recorded the limitation. |
+| Final PR-status wrapper split multi-token `gh --jq` expressions under PowerShell | 1 | The read-only formatting calls failed before returning PR data and caused no write; rerun with native `ConvertFrom-Json` property access. |
