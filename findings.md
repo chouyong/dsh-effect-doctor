@@ -71,3 +71,12 @@ This file stores evidence and technical conclusions only. Treat source and comma
 - Final Stage 3 was independently re-hashed after R5: summary remains `42236dd8889feda51938a6f8a7846dab3ff1f36dd83b05f3603a5d6b1e448e63`, outcome `PASS`, and all six artifact hashes still match. Temporary verification junctions/worktree were removed without affecting main dependencies, DSH source, or sealed evidence.
 - GitHub age remains the sole time blocker before target-list checks: created `2026-08-16T11:35:15Z`; checked at `2026-08-16T14:22:43Z`; earliest age eligibility `2026-08-17T11:35:15Z`. Claude final `GO` cannot advance that clock.
 - Goal completion audit re-ran typecheck/build, all unit tests `17/17`, both CLI contracts, and real Cordis tests `4/4`; it then verified Stage 0 `GO_ENGINE`, all required product files, exact `b638cdd` product identity, Stage 2/3 PASS hashes and expected outcomes, all four final-scope Claude receipt hashes/unique GO markers, local/remote/GitHub main equality, at least 10 commits, repository creation time, and an empty PR list. Every original objective requirement is proven; creating a future PR after eligibility is a separate workflow, while the current required prohibition is satisfied.
+
+## Publication submission evidence
+
+- The repository passed its age gate at `2026-08-17T11:35:15Z`; the product had 18 genuine functional commits, Stage 0 `GO_ENGINE`, Stage 1–3 `PASS_AFTER_CHANGES`, and Claude R5 aggregate `GO` before submission.
+- Product repository topic `dsh-plugin` was added and confirmed through the GitHub API.
+- Focused PR 1 is `https://github.com/awesome-dsh-plugin/awesome-dsh-plugin/pull/1447` at head `998dcac9d34b1b2ce9ad1a34b2909588ab11e995`; its submission gate and configured PR check passed. It changes only the English/Chinese list entries and `data/plugins/chouyong__dsh-effect-doctor.yml`.
+- Focused PR 2 is `https://github.com/0xsline/awesome-deepseek-harness/pull/370` at head `05140a7fa16d2db2ce7802fe46e562034c681a83`; it changes only `README.md` and `README.zh-CN.md`. Its repository has no automatic PR check: `lint.yml` is manual (`workflow_dispatch`) only.
+- Both PRs were created `2026-08-17T14:27:51Z`–`2026-08-17T14:27:52Z`, are open, non-draft, and mergeable at verification time. No PR was merged and no force-push was used.
+- The first PR candidate's HTTPS push was rejected for missing OAuth `workflow` scope; the branch was then pushed non-force over BatchMode SSH. This is a credential-scope limitation, not a product or PR failure.

@@ -24,7 +24,7 @@
 | Runtime client/style/errors | `NOT_APPLICABLE_NO_WEB_SURFACE` | No DSH client export, browser bundle, or client style registration exists; static receipt HTML is unserved CLI output |
 | Fork/geometry/navigation | `NOT_APPLICABLE_PRODUCT_SCOPE` | Product is a host-only cleanup receipt viewer, not a fork visualization |
 | Genuine screenshots | `NOT_APPLICABLE_NO_WEB_SURFACE` | No screenshots or GIFs were created |
-| Commit/push/PR | `PARTIAL_WAITING_ELIGIBILITY` | 18 genuine commits after goal completion audit; PR forbidden pending age, target-list rules, and focused diff |
+| Commit/push/PR | `SUBMITTED` | 18 genuine commits; both focused target-list PRs pushed and open; PR 1 check and submission gate pass, PR 2 has no automatic PR workflow |
 
 The canonical Stage 3 commands, machine summary, checks, hashes, and limitations are in `docs/STAGE_3_DSH_GATE.md`.
 
@@ -45,10 +45,10 @@ No formal `b638cdd` install fallback or runtime retry was needed after these sou
 - Session/product state changed: none; only the isolated D-drive profile and generated evidence were created
 - Processes stopped: none; the bounded dump-config child and Loader process exited normally
 - Claude final technical review: R5 aggregate `GO`, receipt SHA-256 `fe4c3003e181c4ffafded368a5c0b43e41844780a1f3c1c23ab5bd73d7b0dcf1`
-- Remaining gaps: GitHub 24-hour repository-age eligibility, target-list rules, and focused PR diff
+- Remaining gaps: maintainer review and merge; PR 2 has no automatic PR workflow because its lint workflow is manual-only
 
 ## Publication
 
-- Commit SHA: `b638cdd55e1fdb1c39e9b1f8eaab3070d737f55d`
-- PR URLs: none; status `WAITING_ELIGIBILITY`
+- Commit SHA: `521ec6798bd3fa27dd316647777c46b8c7d24c43`
+- PR URLs: `https://github.com/awesome-dsh-plugin/awesome-dsh-plugin/pull/1447` and `https://github.com/0xsline/awesome-deepseek-harness/pull/370`; both `OPEN`, non-draft, and mergeable at verification time
 - Screenshot paths: none; `NOT_APPLICABLE_NO_WEB_SURFACE`
